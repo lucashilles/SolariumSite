@@ -1,1 +1,108 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Teste</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> 
+		<!-- <script src="jquery.parallax.js"></script> -->
+<style>
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+	font-family: MyriadPro, 'Myriad Pro', 'PT Sans', sans-serif;
+}
+#nav {
+  width: 100%;
+  height: 40px;
+  background-color: #2C4FA4;
+  position: fixed;
+  top: 0;
+}
+
+#content > [id^="bloco"] {
+  width: 100%;
+  height: 100%;
+}
+#content {
+  width: 100%;
+  height: 100%;
+}
+#container {
+  width: 100%;
+  height: 100%;
+}
+
+#parallaxBar{
+    height:100%;
+	width: 100%;
+    background-color:#ffea00;
+    background-image: url("fundo.jpg");
+    /*! position: absolute; */ 	
+    background-size: 105%;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+}
+
+#nav ul {
+	list-style: none;
+}
+#nav li {
+	display: inline;
+}
+</style>
+</head>
+<body>
+	<div id="container">
+		<div id="nav">
+			<ul>
+				<li><a href="#bloco1">Bloco 1</a></li>
+				<li><a href="#bloco2">Bloco 2</a></li>
+				<li><a href="#bloco3">Bloco 3</a></li>
+				<li><a href="#bloco4">Bloco 4</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<div id="bloco1">
+				<section id="parallaxBar" data-speed="6" data-type="background">
+					<div class="container-fluid">
+					</div>
+				</section> 
+			</div>
+			<div style="background-color: rgb(188, 246, 181);" id="bloco2">
+			</div>
+			<div style="background-color: rgb(156, 226, 249);" id="bloco3">
+			</div>
+			<div style="background-color: rgb(170, 170, 170);" id="bloco4">
+			</div>
+		</div>
+	</div>
+	<script>
+	$(document).ready(function(){
+		$window = $(window);
+		//Captura cada elemento section com o data-type "background"
+		$('section[data-type="background"]').each(function(){
+			var $scroll = $(this);   
+				//Captura o evento scroll do navegador e modifica o backgroundPosition de acordo com seu deslocamento.            
+				$(window).scroll(function() {
+					var yPos = -($window.scrollTop() / $scroll.data('speed')); 
+					var coords = '50% '+ yPos + 'px';
+					$scroll.css({ backgroundPosition: coords });    
+				});
+	   });  
+	});
+	
+	$(window).resize(function() {
+		if (parseInt($("#bloco1").css("height"))*1.5 > parseInt($("#bloco1").css("width"))) {
+			// Retrato
+			$('#parallaxBar').css('background-size', "auto 115%");
+		} else {
+			// Paisagem
+			$('#parallaxBar').css('background-size', "115%");
+		}
+	}).resize();
+	</script>
+</body>
+</html>
