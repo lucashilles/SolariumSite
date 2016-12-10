@@ -2,10 +2,13 @@
 <html>
     <head>
         <title>Teste</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"> 
+		<link rel="stylesheet" type="text/css" href="styles.css">
 		<!-- <script src="jquery.parallax.js"></script> -->
-<style>
+<!--<style>
 html, body {
     width: 100%;
     height: 100%;
@@ -52,22 +55,51 @@ html, body {
 #nav li {
 	display: inline;
 }
-</style>
+</style>-->
 </head>
 <body>
 	<div id="container">
 		<div id="nav">
-			<ul>
-				<li><a href="#bloco1">Bloco 1</a></li>
-				<li><a href="#bloco2">Bloco 2</a></li>
-				<li><a href="#bloco3">Bloco 3</a></li>
-				<li><a href="#bloco4">Bloco 4</a></li>
+			<div id="navmobile" class="row" style="display: none">
+				<div class="col-xs-12">
+					<a href="#bloco1">INICIO</a>
+				</div>
+				<div class="col-xs-12">
+					<a href="#bloco2">COMO FUNCIONA</a>
+				</div>
+				<div class="col-xs-12">
+					<a href="#bloco3">VANTAGENS</a>
+				</div>
+				<div class="col-xs-12">
+					<a href="#bloco4">CLIENTES</a>
+				</div>
+				<div class="col-xs-12">
+					<a href="#bloco5">CONTATO</a>
+				</div>
+			</div>
+			<ul id="navdesktop" class="nav nav-inline">
+				<li class="nav-item">
+					<a href="#bloco1">INICIO</a>
+				</li>
+				<li class="nav-item">
+					<a href="#bloco2">COMO FUNCIONA</a>
+				</li>
+				<li class="nav-item">
+					<a href="#bloco3">VANTAGENS</a>
+				</li>
+				<li class="nav-item">
+					<a href="#bloco4">CLIENTES</a>
+				</li>
+				<li class="nav-item">
+					<a href="#bloco5">CONTATO</a>
+				</li>
 			</ul>
 		</div>
 		<div id="content">
 			<div id="bloco1">
 				<section id="parallaxBar" data-speed="6" data-type="background">
 					<div class="container-fluid">
+						<div id="logo"></div>
 					</div>
 				</section> 
 			</div>
@@ -76,6 +108,8 @@ html, body {
 			<div style="background-color: rgb(156, 226, 249);" id="bloco3">
 			</div>
 			<div style="background-color: rgb(170, 170, 170);" id="bloco4">
+			</div>
+			<div style="background-color: rgb(255, 197, 246);" id="bloco5">
 			</div>
 		</div>
 	</div>
@@ -102,7 +136,16 @@ html, body {
 			// Paisagem
 			$('#parallaxBar').css('background-size', "115%");
 		}
+		if (parseInt($("#bloco1").css("width")) < 576) {
+			$("#navmobile").show();
+			$("#navdesktop").hide();
+		} else {
+			$("#navmobile").hide();
+			$("#navdesktop").show();
+		}
 	}).resize();
+
+	
 	</script>
 </body>
 </html>
