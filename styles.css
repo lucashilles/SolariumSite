@@ -62,14 +62,13 @@ html, body {
 }
 
 #parallaxBar{
-    height:100%;
-	width: 100%;
-    background-color:#ffea00;
-    background-image: url("fundo.jpg");
-    /*! position: absolute; */ 	
-    background-size: 105%;
-	background-repeat: no-repeat;
-	background-position: 50% 0;
+  height:100%;
+  width: 100%;
+  background-color:#92cbfd;
+  background-image: url("fundo.jpg");
+  background-size: 105%;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
 }
 /*
 nav ul {
@@ -88,7 +87,7 @@ nav a {
   color: #fff;
 }
 */
-.container-fluid {
+.banner {
   position: absolute;
   top: 0;
   left: 0;
