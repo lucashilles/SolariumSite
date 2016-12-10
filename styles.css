@@ -15,6 +15,7 @@ html, body {
   top: 0;
   z-index: 10;
 }
+
 #nav a{
   color: #fff;
   text-decoration: none;
@@ -22,6 +23,19 @@ html, body {
 
 #navmobile {
   text-align: center;
+  background-color: #2C4FA4;
+}
+
+.navbar-brand {
+    float: left;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: 40px;
+    margin-left: 5%;
+    color: #FFF;
+    letter-spacing: .06em;
 }
 
 .nav, .nav-inline {
