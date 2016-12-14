@@ -19,6 +19,8 @@ html, body {
 #nav a{
   color: #fff;
   text-decoration: none;
+  display: block;
+  border-top: 1px solid #4964A3
 }
 
 #navmobile {
@@ -65,28 +67,12 @@ html, body {
   height:100%;
   width: 100%;
   background-color:#92cbfd;
-  background-image: url("fundo.jpg");
+  background-image: url("img/fundo.jpg");
   background-size: 105%;
   background-repeat: no-repeat;
   background-position: 50% 0;
 }
-/*
-nav ul {
-	list-style: none;
-	float: right;
-	font-size: 14pt;
-	line-height: 4pt;
-	width: 40%;
-}
-nav li {
-	display: inline;
-	margin-right: 6%;
-}
-nav a {
-  text-decoration: none;
-  color: #fff;
-}
-*/
+
 .banner {
   position: absolute;
   top: 0;
@@ -99,8 +85,28 @@ nav a {
 #logo {
 	height: 100%;
 	width: 100%;
-	background-image: url("Solarium-LOGO.png");
+	background-image: url("img/Solarium-LOGO.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-right: 2%;
+    float: left;
+}
+
+.Vantagem {
+    margin-bottom: 1.5%;
+    padding: 0 4%;
+    line-height: normal;
 }

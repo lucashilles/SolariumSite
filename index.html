@@ -20,19 +20,19 @@
 				<button type="button" style="margin-right: 5%;" class="btn btn-secondary btn-sm" onclick="$('#menumobile').toggle();"><span class="fa fa-bars" aria-hidden="true"></span></button></div>
 				<ul id="menumobile" class="nav" style="display: none;">
 					<li class="col-xs-12 nav-item">
-						<a href="#bloco1">INICIO</a>
+						<a href="#bloco1" onclick="$('#menumobile').toggle();">INICIO</a>
 					</li>
 					<li class="col-xs-12 nav-item">
-						<a href="#bloco2">COMO FUNCIONA</a>
+						<a href="#bloco2" onclick="$('#menumobile').toggle();">COMO FUNCIONA</a>
 					</li>
 					<li class="col-xs-12 nav-item">
-						<a href="#bloco3">VANTAGENS</a>
+						<a href="#bloco3" onclick="$('#menumobile').toggle();">VANTAGENS</a>
 					</li>
 					<li class="col-xs-12 nav-item">
-						<a href="#bloco4">CLIENTES</a>
+						<a href="#bloco4" onclick="$('#menumobile').toggle();">CLIENTES</a>
 					</li>
 					<li class="col-xs-12 nav-item">
-						<a href="#bloco5">CONTATO</a>
+						<a href="#bloco5" onclick="$('#menumobile').toggle();">CONTATO</a>
 					</li>
 				</ul>
 			</div>
@@ -63,25 +63,37 @@
 					</div>
 				</section> 
 			</div>
+
 			<div style="background-color: rgb(188, 246, 181);" id="bloco2">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-xs-12" style="text-align:center">
-							<h1 style="margin-top:45px">COMO FUNCIONA<BR>
+							<h1 style="margin-top:50px">COMO FUNCIONA<BR>
 							A ENERGIA SOLAR FOTOVOLTAICA</h1>
 						</div>
 					</div>
 					<div class="row" style="text-align:center">
-						<div class="col-xs-4 offset-xs-2">
-							<ul>
-								<li>Item A</li>
-								<li>Item B</li>
-								<li>Item C</li>
-								<li>Item D</li>
-							</ul>
+						<!-- Corrigir espaçadores -->
+						<div class="col-xs-12 col-md-4 push-md-6">
+							<img src="img/etapa7.png" style="vertical-align: middle; width: 80%; padding: 10% 0;"/>
 						</div>
-						<div class="col-xs-4">
-							<img src="img/etapa7.png" />
+						<div class="col-xs-12 col-md-4 pull-md-4 offset-md-2" style="text-align:justify">
+							<div class="Vantagem">
+								<div class="numberCircle">A</div> 
+								<div>Durante o dia, a luz solar que incide sobre os painéis é absorvida e convertida em energia elétrica, corrente contínua(CC).</div>
+							</div>
+							<div class="Vantagem">
+								<div class="numberCircle">B</div>
+								<div>O inverso capta a corrente contínua e transforma em corrente alternada (CA) que pode ser consumida na casa ou empresa.</div>
+							</div>
+							<div class="Vantagem">
+								<div class="numberCircle">C</div>
+								<div>A corrente alternada (CA) é então consumida na residência ou empresa, gerando energia para lâmpadas, eletrodoméstico e outros.</div>
+							</div>
+							<div class="Vantagem">
+								<div class="numberCircle">D</div>
+								<div>O excedente de energia gerada é injetada na rede de distribuição, gerando créditos que podem ser utilizados em até 60 meses.</div>
+							</div>
 						</div>
 					</div>
 					<div class="row" style="text-align:center">
@@ -91,6 +103,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div style="background-color: rgb(156, 226, 249);" id="bloco3">
 				<div class="container-fluid">
 					<div class="row">
@@ -120,8 +133,10 @@
 					</div>
 				</div>
 			</div>
+
 			<div style="background-color: rgb(170, 170, 170);" id="bloco4">
 			</div>
+
 			<div style="background-color: rgb(255, 197, 246);" id="bloco5">
 			</div>
 		</div>
