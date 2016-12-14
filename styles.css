@@ -52,12 +52,21 @@ html, body {
 
 #content > [id^="bloco"] {
   width: 100%;
+}
+
+.bloco {
   height: 100%;
 }
+
+.bloco-fluido {
+  min-height: 100%;
+}
+
 #content {
   width: 100%;
   height: 100%;
 }
+
 #container {
   width: 100%;
   height: 100%;
