@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-	font-family: MyriadPro, 'Myriad Pro', 'PT Sans', sans-serif;
+	  font-family: MyriadPro, 'Myriad Pro', 'PT Sans', sans-serif;
 }
 
 #nav {
@@ -118,4 +118,28 @@ html, body {
     margin-bottom: 1.5%;
     padding: 0 4%;
     line-height: normal;
+}
+
+.block {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 576px) { /* screen size until 576px */
+  body {
+      font-size: 14px; /* 0.8x default size */
+  }
+}
+@media (min-width: 768px) { /* screen size until 768px */
+  body {
+      font-size: 18px; /* 1.2x default size */
+  }
+}
+@media (min-width: 992px) { /* screen size until 992px */
+  body {
+      font-size: 20px; /* 1.5x default size */
+  }
 }
