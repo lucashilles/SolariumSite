@@ -55,11 +55,11 @@ html, body {
 }
 
 .bloco {
-  height: 100%;
+  /*height: 100%;*/
 }
 
 .bloco-fluido {
-  min-height: 100%;
+  /*min-height: 100%;*/
 }
 
 #content {
@@ -102,14 +102,14 @@ html, body {
 
 .numberCircle {
     border-radius: 50%;
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.2em;
+    height: 1.2em;
     background: #fff;
     border: 2px solid #666;
     color: #666;
     text-align: center;
-    font-size: 1.5em;
-    line-height: 1.5em;
+    font-size: 1.2em;
+    line-height: 1.2em;
     margin-right: 2%;
     float: left;
 }
@@ -128,18 +128,62 @@ html, body {
   left: 0;
 }
 
+.titulo {
+  margin-top: 55px;
+}
+
+.cardItem {
+  margin-bottom: 30px;
+}
+
+#mapOverlay {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 95px;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+}
+
+#foot {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: #2C4FA4;
+  color: #fff;
+  padding-top: 10px;
+}
+
 @media (min-width: 576px) { /* screen size until 576px */
   body {
-      font-size: 14px; /* 0.8x default size */
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 16px;
   }
 }
 @media (min-width: 768px) { /* screen size until 768px */
   body {
-      font-size: 18px; /* 1.2x default size */
+    font-size: 18px;
+  }
+  
+  h1 {
+    font-size: 20px;
+  }
+  .titulo {
+    padding-bottom: 30px;
   }
 }
 @media (min-width: 992px) { /* screen size until 992px */
   body {
-      font-size: 20px; /* 1.5x default size */
+    font-size: 23.5px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+  .titulo {
+    padding-bottom: 30px;
   }
 }
